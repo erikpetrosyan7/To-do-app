@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Применяем ко всем основным элементам */
+body,
+.app-container,
+.todo-item,
+.todo-input,
+button {
+	transition: background-color 0.3s ease, color 0.3s ease,
+		border-color 0.3s ease;
+}
+
+div {
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 30px 25px;
+	border-radius: 15px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 25px;
+	color: #272727;
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+
+.todo-form {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 25px;
+}
+
+.todo-input {
+	margin-right: 20px;
+	flex: 1;
+	padding: 12px 15px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	transition: border 0.2s;
+}
+
+.todo-input:focus {
+	outline: none;
+	border-color: #4caf50;
+	box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.todo-button {
+	padding: 12px 20px;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(45deg, #4caf50, #45a049);
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.todo-list {
+	list-style: none;
+	padding: 0;
+}
+
+.todo-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 15px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	background: #f5f5f5;
+	transition: background 0.2s, transform 0.2s;
+}
+
+.todo-item:hover {
+	background: #e0f7fa;
+	transform: translateX(2px);
+}
+
+.todo-item button {
+	padding: 6px 12px;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.2s;
+}
+
+.buttons {
+	margin: 0;
+	padding: 0;
+}
+
+.edit-button,
+.save-button {
+	background-color: #494949;
+}
+.delete-button {
+	margin-left: 5px;
+	background: #f44336;
+}
+
+.todo-item .edit-button:hover,
+.save-button:hover {
+	background: #212121;
+	transform: translateY(-1px);
+}
+
+.todo-item .delete-button:hover {
+	background: #da190b;
+	transform: translateY(-1px);
+}
+
+.todo-item.completed {
+	text-decoration: line-through;
+	color: #999;
+	background: #e0e0e0;
+}
+
+/* Dark mode */
+body.dark {
+	background-color: #1e1e1e;
+}
+
+body.dark h1 {
+	color: #ddd;
+}
+.dark-mode-button {
+	background-color: #333;
+	color: #f5f5f5;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 6px;
+	cursor: pointer;
+	margin-bottom: 16px;
+}
+
+.dark .dark-mode-button {
+	background-color: #f5f5f5;
+	color: #121212;
+}
